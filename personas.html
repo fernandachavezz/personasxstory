@@ -7,31 +7,40 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Peloton Interface Project</h1>
-        <p>A study on user experience through sketches, interviews, and empathy mapping.</p>
-    </header>
+    <header class="hero-header">
+        <div class="hero-content">
+          <img src="images/peloton_logo.jpg" alt="Peloton logo" class="hero-logo">
+          <div class="hero-text">
+            <h1>Peloton Interface Project</h1>
+            <p>A UI/UX exploration through sketches, interviews, personas, and storyboarding.</p>
+          </div>
+        </div>
+      </header>
 
     <nav>
         <a href="index.html">Home</a>
         <a href="sketches.html">Sketches</a>
         <a href="interviews.html">User Interviews</a>
-        <a href="personas.html">Personas & Empathy Maps</a>
+        <a href="personas.html" class = "active">Personas & Empathy Maps</a>
         <a href="storyboard.html">Storyboard</a>
     </nav>
 
     <section>
         <h2>Personas & Empathy Maps</h2>
-
-        <h3>Athlete Anthony</h3>
-        <img src="../images/athlete.jpg" alt="Athlete Anthony Persona" class="persona-img">
-        <p><strong>Description:</strong> A former college athlete navigating fitness post-graduation while maintaining his physique.</p>
-
-        <h3>Busy Betty</h3>
-        <img src="../images/busy.jpg" alt="Busy Betty Persona" class="persona-img">
-        <p><strong>Description:</strong> A student trying to efficiently fit workouts into her packed schedule between classes.</p>
-    </section>
-
+      
+        <div class="persona-block">
+          <h3>Athlete Anthony</h3>
+          <img src="../images/athlete.jpg" alt="Athlete Anthony Persona" class="persona-img">
+          <p class="persona-caption"><strong>Description:</strong> A former college athlete navigating fitness post-graduation while maintaining his physique.</p>
+        </div>
+      
+        <div class="persona-block">
+          <h3>Busy Betty</h3>
+          <img src="../images/busy.jpg" alt="Busy Betty Persona" class="persona-img">
+          <p class="persona-caption"><strong>Description:</strong> A student trying to efficiently fit workouts into her packed schedule between classes.</p>
+        </div>
+      </section>
+      
     <footer>
         <p>Designed by Fernanda Chavez | Peloton Interface Research</p>
     </footer>

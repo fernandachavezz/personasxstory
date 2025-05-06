@@ -1,176 +1,156 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Interviews</title>
-    <link rel="stylesheet" href="styles.css">
-    <script>
-        function openTab(tabName) {
-            let tabs = document.getElementsByClassName("tab-content");
-            for (let tab of tabs) {
-                tab.style.display = "none";
-            }
-            document.getElementById(tabName).style.display = "block";
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Interviews | Peloton Interface Project</title>
+  <link rel="stylesheet" href="styles.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+  <script>
+    function openTab(tabName) {
+      let tabs = document.getElementsByClassName("tab-content");
+      for (let tab of tabs) {
+        tab.style.display = "none";
+      }
+      document.getElementById(tabName).style.display = "block";
+
+      let buttons = document.querySelectorAll('.tab-buttons button');
+      buttons.forEach(btn => btn.classList.remove('active-tab'));
+      event.target.classList.add('active-tab');
+    }
+  </script>
 </head>
 <body>
-    <header>
-        <h1>Peloton Interface Project</h1>
-        <p>A study on user experience through sketches, interviews, and empathy mapping.</p>
-    </header>
+    <header class="hero-header">
+        <div class="hero-content">
+          <img src="images/peloton_logo.jpg" alt="Peloton logo" class="hero-logo">
+          <div class="hero-text">
+            <h1>Peloton Interface Project</h1>
+            <p>A UI/UX exploration through sketches, interviews, personas, and storyboarding.</p>
+          </div>
+        </div>
+      </header>
 
-    <nav>
-        <a href="index.html">Home</a>
-        <a href="sketches.html">Sketches</a>
-        <a href="interviews.html">User Interviews</a>
-        <a href="personas.html">Personas & Empathy Maps</a>
-        <a href="storyboard.html">Storyboard</a>
-    </nav>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="sketches.html">Sketches</a>
+    <a href="interviews.html" class="active">User Interviews</a>
+    <a href="personas.html">Personas & Empathy Maps</a>
+    <a href="storyboard.html">Storyboard</a>
+  </nav>
 
+  <main>
     <section>
-        <h2>User Interviews</h2>
+      <h2>User Interviews</h2>
 
-        <!-- Tab Buttons -->
-        <div class="tab-buttons">
-            <button onclick="openTab('user1')" class="active-tab">User 1</button>
-            <button onclick="openTab('user2')">User 2</button>
-            <button onclick="openTab('user3')">User 3</button>
-        </div>
+      <div class="tab-buttons">
+        <button onclick="openTab('user1')" class="active-tab">User 1</button>
+        <button onclick="openTab('user2')">User 2</button>
+        <button onclick="openTab('user3')">User 3</button>
+      </div>
 
-        <!-- User 1 Interview Content -->
-        <div id="user1" class="tab-content" style="display: block;">
-            <div class="interview-container">
-                <div class="interview-text">
-                    <h3>👤 User #1: Casual Peloton Rider</h3>
-                    <p><strong>Experience Level:</strong> Uses the Peloton <em>twice a week</em> for the past <em>three months</em>.</p>
-
-                    <h4>🚴 Typical Routine</h4>
-                    <ul>
-                        <li>Logs in and selects <strong>"Just Ride"</strong></li>
-                        <li>Rides for **10 miles** without taking structured classes</li>
-                    </ul>
-
-                    <h4>⚠️ Challenges</h4>
-                    <ul>
-                        <li>Never connected **headphones** before.</li>
-                        <li>Didn't realize Peloton had **structured classes**.</li>
-                    </ul>
-
-                    <h4>💡 Suggested Improvements</h4>
-                    <ul>
-                        <li>🔍 **Feature Discovery:** Add a tutorial pop-up for first-time users.</li>
-                        <li>🎧 **One-click Bluetooth setup** for headphones.</li>
-                        <li>⚙️ **Saved User Preferences:** Auto-save seat height and resistance settings.</li>
-                    </ul>
-                </div>
-                <div class="interview-image">
-                    <img src="../images/user1.JPG" alt="User adjusting Peloton bike">
-                </div>
-            </div>
-        </div>
-
-       
-        <!-- User 2 Interview Content -->
-        <div id="user2" class="tab-content" style="display: none;">
-            <div class="interview-container">
-                <div class="interview-text">
-                    <h3>👤 User #2: Experienced but Infrequent User</h3>
-                    <p><strong>Experience Level:</strong> Used to ride **every day**, now uses it **occasionally**.</p>
-
-                    <h4>🎯 Expectations Before First Ride</h4>
-                    <p>Initially thought it was just a **regular stationary bike**—was surprised to find instructors and **music-matching workouts**.</p>
-
-                    <h4>🚴 Typical Routine</h4>
-                    <ul>
-                        <li>Logs into account.</li>
-                        <li>Searches for a specific **instructor** based on **playlist preferences**.</li>
-                        <li>Connects **headphones** and starts the ride.</li>
-                    </ul>
-
-                    <h4>🖥️ Navigation Experience</h4>
-                    <p>Finds it **self-explanatory** and intuitive. Appreciates the **intro guide when signing up**.</p>
-
-                    <h4>⚠️ Challenges</h4>
-                    <ul>
-                        <li>Occasional **Bluetooth connection issues** with headphones.</li>
-                        <li>Struggles to **adjust the seat properly**.</li>
-                    </ul>
-
-                    <h4>⭐ Favorite Features</h4>
-                    <ul>
-                        <li>Metrics keep them accountable—especially **leaderboards and calorie tracking**.</li>
-                        <li>Gamification and **digital experience** make it feel better than **traditional gym equipment**.</li>
-                    </ul>
-
-                    <h4>💡 Suggested Improvements</h4>
-                    <ul>
-                        <li>🔍 **Easier Bike Adjustments:** More intuitive seat and handlebar customization.</li>
-                        <li>🎧 **Simpler Bluetooth Pairing:** A **one-click setup** when starting a workout.</li>
-                    </ul>
-                </div>
-                <div class="interview-image">
-                    <img src="../images/user2.JPG" alt="User selecting a Peloton workout">
-                </div>
-            </div>
-        </div>
-
-       <!-- User 3 Interview Content -->
-<div id="user3" class="tab-content" style="display: none;">
-    <div class="interview-container">
-        <div class="interview-text">
-            <h3>👤 User #3: First-Time Peloton User</h3>
-            <p><strong>Experience Level:</strong> New to Peloton, has used standard stationary bikes before.</p>
-
-            <h4>🎯 Expectations Before First Ride</h4>
-            <p>Thought it would be a **basic stationary bike**, surprised by the **digital interface and instructor-led classes**.</p>
-
+      <div id="user1" class="tab-content" style="display: block;">
+        <div class="interview-container">
+          <div class="interview-text">
+            <h3>👤 User #1: Casual Peloton Rider</h3>
+            <p><strong>Experience Level:</strong> Uses the Peloton <em>twice a week</em> for the past <em>three months</em>.</p>
             <h4>🚴 Typical Routine</h4>
             <ul>
-                <li>Logs in and browses class options.</li>
-                <li>Filters by **duration and music genre**.</li>
-                <li>Starts a **20-30 minute beginner-friendly ride**.</li>
+              <li>Logs in and selects <strong>"Just Ride"</strong></li>
+              <li>Rides for <strong>10 miles</strong> without taking structured classes</li>
             </ul>
-
-            <h4>🖥️ Navigation Experience</h4>
-            <p>Search function is **easy to use**, but took time to understand **leaderboard and performance tracking**.</p>
-
             <h4>⚠️ Challenges</h4>
             <ul>
-                <li>Had trouble adjusting the **seat height**.</li>
-                <li>Found too many **class options overwhelming**.</li>
-                <li>Didn’t immediately understand **output metrics** like cadence.</li>
+              <li>Never connected headphones before.</li>
+              <li>Didn't realize Peloton had structured classes.</li>
             </ul>
-
-            <h4>⭐ Favorite Features</h4>
-            <ul>
-                <li>Instructor-led classes with **music integration**.</li>
-                <li>Leaderboards add **a fun competitive aspect**.</li>
-                <li>Cool-down and **post-workout stats** were useful.</li>
-            </ul>
-
             <h4>💡 Suggested Improvements</h4>
             <ul>
-                <li>💡 **Pre-ride tutorial** for new users.</li>
-                <li>🚴 **Quick-start button** for users who just want to ride.</li>
-                <li>🔧 **More intuitive bike adjustments** before starting a workout.</li>
+              <li><strong>Feature Discovery:</strong> Add a tutorial pop-up for first-time users.</li>
+              <li><strong>Easier Navigation:</strong> One-click Bluetooth setup for headphones.</li>
+              <li><strong>Saved Preferences:</strong> Auto-save seat height and resistance settings.</li>
             </ul>
+          </div>
+          <div class="interview-image">
+            <img src="../images/user1.JPG" alt="User adjusting Peloton bike">
+          </div>
+        </div>
+      </div>
 
+      <div id="user2" class="tab-content">
+        <div class="interview-container">
+          <div class="interview-text">
+            <h3>👤 User #2: Experienced but Infrequent User</h3>
+            <p><strong>Experience Level:</strong> Used to ride <em>every day</em>, now uses it <em>occasionally</em>.</p>
+            <h4>🎯 Expectations Before First Ride</h4>
+            <p>Thought it was just a <strong>stationary bike</strong>, surprised by music-matched instructor workouts.</p>
+            <h4>🚴 Routine</h4>
+            <ul>
+              <li>Logs in, searches by <strong>playlist or instructor</strong>.</li>
+              <li>Connects headphones, starts the ride.</li>
+            </ul>
+            <h4>⚠️ Challenges</h4>
+            <ul>
+              <li>Bluetooth connection issues.</li>
+              <li>Seat adjustment problems.</li>
+            </ul>
+            <h4>⭐ Favorite Features</h4>
+            <ul>
+              <li>Leaderboards, metrics, and gamified progress.</li>
+            </ul>
+            <h4>💡 Suggestions</h4>
+            <ul>
+              <li>More intuitive bike customization.</li>
+              <li>One-click Bluetooth pairing.</li>
+            </ul>
+          </div>
+          <div class="interview-image">
+            <img src="../images/user2.JPG" alt="User selecting Peloton workout">
+          </div>
+        </div>
+      </div>
+
+      <div id="user3" class="tab-content">
+        <div class="interview-container">
+          <div class="interview-text">
+            <h3>👤 User #3: First-Time Peloton User</h3>
+            <p><strong>Experience Level:</strong> New to Peloton, used basic stationary bikes before.</p>
+            <h4>🎯 Expectations</h4>
+            <p>Expected a simple bike, impressed by the digital experience.</p>
+            <h4>🚴 Routine</h4>
+            <ul>
+              <li>Logs in, filters classes by duration and music.</li>
+              <li>Chooses 20–30 min beginner rides.</li>
+            </ul>
+            <h4>⚠️ Challenges</h4>
+            <ul>
+              <li>Adjusting seat height.</li>
+              <li>Understanding performance metrics.</li>
+              <li>Overwhelmed by class choices.</li>
+            </ul>
+            <h4>⭐ Favorites</h4>
+            <ul>
+              <li>Instructor music, leaderboards, post-ride stats.</li>
+            </ul>
+            <h4>💡 Improvements</h4>
+            <ul>
+              <li>Pre-ride tutorial for new users.</li>
+              <li>Quick-start ride button.</li>
+              <li>More intuitive seat adjustment.</li>
+            </ul>
             <h4>🚀 Final Thoughts</h4>
-            <p>Excited to explore more classes, would **recommend Peloton to beginners**.</p>
+            <p>Would recommend Peloton to new users.</p>
+          </div>
+          <div class="interview-image">
+            <img src="../images/user3.jpeg" alt="User 3 on Peloton">
+          </div>
         </div>
-        <div class="interview-image">
-            <img src="../images/user3.jpeg" alt="User 3 using Peloton">
-        </div>
-    </div>
-</div>
-
+      </div>
     </section>
+  </main>
 
-    <footer>
-        <p>Designed by Fernanda Chavez | Peloton Interface Research</p>
-    </footer>
+  <footer>
+    <p>Designed by Fernanda Chavez | Peloton Interface Research</p>
+  </footer>
 </body>
 </html>
-
